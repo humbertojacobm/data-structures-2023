@@ -14,11 +14,10 @@
 // 1,2,        7, 8
 //     3,4,5,  7
 
-
 var checkIfArraysHaveMatches = (firstArray: number[], secondArray: number[]): boolean => {
 
-    const firstHashTable = {};
-    const secondHashTable = {};
+    const firstHashTable: { [key: number]: number } = {};
+    const secondHashTable: { [key: number]: number } = {};
 
     for (let index in firstArray) { //O (n)
         firstHashTable[firstArray[index]] = firstArray[index];
@@ -43,9 +42,9 @@ var checkIfArraysHaveMatches = (firstArray: number[], secondArray: number[]): bo
     return false;
 }
 
-console.log(checkIfArraysHaveMatches([1,2,3].sort((a: number, b: number) => a - b), [4,5,6])); // false
-console.log(checkIfArraysHaveMatches([1,2,3], [2,3,4])); // true
-console.log(checkIfArraysHaveMatches([1,2,3], [2,4,5])); // true
+console.log(checkIfArraysHaveMatches([1, 2, 3].sort((a: number, b: number) => a - b), [4, 5, 6])); // false
+console.log(checkIfArraysHaveMatches([1, 2, 3], [2, 3, 4])); // true
+console.log(checkIfArraysHaveMatches([1, 2, 3], [2, 4, 5])); // true
 
 function getLastValue(secondArray: number[], firstArray: number[]): number {
     let lastValue: number
