@@ -42,10 +42,6 @@ var checkIfArraysHaveMatches = (firstArray: number[], secondArray: number[]): bo
     return false;
 }
 
-console.log(checkIfArraysHaveMatches([1, 2, 3].sort((a: number, b: number) => a - b), [4, 5, 6])); // false
-console.log(checkIfArraysHaveMatches([1, 2, 3], [2, 3, 4])); // true
-console.log(checkIfArraysHaveMatches([1, 2, 3], [2, 4, 5])); // true
-
 function getLastValue(secondArray: number[], firstArray: number[]): number {
     let lastValue: number
     if (secondArray[secondArray.length - 1] > firstArray[firstArray.length - 1]) {
@@ -71,4 +67,8 @@ function checkIfArraysAreMatching(secondArray: number[], firstArray: number[]): 
         secondArray[secondArray.length - 1] < firstArray[0]
         ;
 }
+
+console.log(checkIfArraysHaveMatches([1, 2, 3].sort((a: number, b: number) => a - b), [4, 5, 6])); // false
+console.log(checkIfArraysHaveMatches([1, 2, 3], [2, 3, 4])); // true
+console.log(checkIfArraysHaveMatches([1, 2, 3], [2, 4, 5])); // true
 
